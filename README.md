@@ -1,0 +1,1 @@
+# tmp_CONTRIBUTING.md
