@@ -2,24 +2,22 @@
 
 Thanks for your interest in contributing! ❤️
 
-This project exists to help **non-technical creators build smarter systems** — so every contribution must be:
+This project exists to help **non-technical creators build smarter systems** — so every contribution should align with these core principles:
 
 ✅ Simple
 ✅ Useful
 ✅ Low-maintenance
 
-We welcome contributors, **but we’re not here to clean up messy code, finish your half-built idea, or debug your mistakes**.
+This repository is focused on new contributions and feature development. Please ensure all pull requests contain complete, debugged code that is ready for review. We do not accept submissions that require significant cleanup, completion work, or debugging by maintainers.
 
-> And if you like the project but don't know how to code.
->
-> You can still support us in other ways:
+> If you like the project but don't know how to code, you can still support us in other ways:
 >
 > * ⭐ Star the project
 > * 📣 Share it on social media
 > * 🌲 Refer it to a friend or your community
 > * 💸 [Sponsor the project](#)
 
-If you need help or have questions, check out the github [discussions](https://github.com/stephengpope/no-code-architects-toolkit/discussions) or join the [community](https://www.skool.com/no-code-architects/about?ref=2f302c52a77541efa2dd5e8b27f3f8c9).
+If you need help or have questions, check out the GitHub [discussions](https://github.com/stephengpope/no-code-architects-toolkit/discussions) or join the [community](https://www.skool.com/no-code-architects/about?ref=2f302c52a77541efa2dd5e8b27f3f8c9).
 
 ---
 
@@ -30,6 +28,7 @@ If you need help or have questions, check out the github [discussions](https://g
 * [Feature Evaluation Framework](#feature-evaluation-framework)
 * [Technical Guidelines](#technical-guidelines)
 * [Contribution Types](#contribution-types)
+* [Branch Naming Conventions](#branch-naming-conventions)
 * [Final Thoughts](#final-thoughts-%EF%B8%8F)
 
 ---
@@ -69,27 +68,71 @@ If you need help or have questions, check out the github [discussions](https://g
 | **Input Clarity**     | Would a non-tech user know what to enter?      | Inputs like "Enter URL", "Choose format"       | Needs tech explanation or experimentation  |
 | **Output Usefulness** | Can this plug straight into Make/Zapier?       | Returns clean files, text, URLs                | Returns raw data or deep nested structures |
 | **Reliability**       | Will it just work?                             | API is stable, no retries, consistent behavior | Depends on flaky APIs or fragile setup     |
-| **Maintenance Cost**  | Will we have to maintain this?                 | One-and-done, doesn’t change often             | Vendor changes often, breaks silently      |
+| **Maintenance Cost**  | Will we have to maintain this?                 | One-and-done, doesn't change often             | Vendor changes often, breaks silently      |
 | **Value vs. Effort**  | Is it worth it?                                | High impact, frequently requested              | Niche, low ROI                             |
 
 ---
 
 ## Technical Guidelines
 
-> These help keep the project tidy and production-ready.
+> These guidelines help maintain a clean and production-ready project.
 
 ### 🧠 Code Style
 
 * Use **clear, descriptive names** (e.g., `convertImageToText`, not `imgTxt`)
-* Comment your logic if it’s not obvious
-* Handle errors — don’t let code crash silently
+* Comment your logic if it's not obvious
+* Handle errors — don't let code crash silently
+* Follow consistent formatting
+
 
 ### 🧼 Clean Contributions
 
-* Don’t change files unrelated to your feature
-* Don’t leave behind unused requirements or code
-* Don’t introduce huge dependencies (we check image size)
+* Don't change files unrelated to your feature
+* Don't leave behind unused requirements or code
+* Don't introduce huge dependencies (we check image size)
 * Use `git status` to review your working tree before you commit
+---
+
+## Branch Naming Conventions
+
+All contributions should follow this process:
+
+1. Fork the [main repository](https://github.com/stephengpope/no-code-architects-toolkit)
+2. Clone your fork:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/no-code-architects-toolkit.git
+   cd no-code-architects-toolkit
+   ```
+3. Add the upstream repository:
+   ```bash
+   git remote add upstream https://github.com/stephengpope/no-code-architects-toolkit.git
+   ```
+4. Fetch and checkout the upstream build branch:
+   ```bash
+   git fetch upstream
+   git checkout -b your-feature-branch upstream/build
+   ```
+5. Name your feature branch following these patterns:
+   * For bug fixes: `fix/descriptive-bug-name`
+   * For new features: `feature/descriptive-feature-name`
+   * For documentation: `docs/descriptive-change`
+
+Example:
+```bash
+# For a new feature
+git fetch upstream
+git checkout -b feature/pdf-to-text-converter upstream/build
+
+# For a bug fix
+git fetch upstream
+git checkout -b fix/webp-upload-crash upstream/build
+```
+
+6. After making your changes, push to your fork and create a pull request:
+   ```bash
+   git push origin your-feature-branch
+   ```
+   Then visit your fork on GitHub and create a pull request targeting the `build` branch of the main repository.
 
 ---
 
@@ -106,10 +149,10 @@ If you need help or have questions, check out the github [discussions](https://g
 
 ## Final Thoughts 🧘‍♂️
 
-* We're not here to clean up after people — if it's not ready, don't submit it.
+* If it's not ready, don't submit it.
 * Contributions should be helpful, obvious, and low-maintenance.
 * The goal: **make complex tasks simple for no-code users**.
 
-If that excites you, welcome aboard! 🎉
+We're excited to see your contributions! 🎉
 
-Let’s keep it simple. Let’s keep it clean. Let’s build something useful.
+Let's build something useful, together.
