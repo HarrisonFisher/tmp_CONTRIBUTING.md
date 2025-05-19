@@ -47,7 +47,7 @@ body:
         - "Local"
         - "Other"
     validations:
-      required: false
+      required: true
   - type: dropdown
     id: assign
     attributes:
