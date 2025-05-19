@@ -34,7 +34,6 @@ body:
       label: Screenshots and relevant files
       description: >
          If applicable, add screenshots or relevant files to help explain your problem.
-      multiple: true
     validations:
       required: false
   - type: dropdown
